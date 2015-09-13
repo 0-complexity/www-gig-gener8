@@ -1,0 +1,91 @@
+<!--<style type="text/css">
+	.text-dark, .text-dark h4 {color: #777777;}
+	.pv-30.ph-20.feature-box.bordered.bg-white.text-center.object-non-visible.animated.object-visible.fadeInDownSmall a { color: #777777;}
+</style>
+<section id="our-magic" class="default-bg pv-30 clearfix text-dark">
+    <div class="container">
+      <div class="row">
+        {{ range $element :=  .Data.Pages }}
+                {{ if eq .Section "home" }}
+                    {{ if eq .Title "magic_box" }}
+				        <div class="col-md-8 col-md-offset-2">
+				          <h2 id="solutions" class="text-center">{{ .Params.header }}</h2>
+				          <div class="separator"></div>
+				          <p class="large text-center text-white">{{ .Params.summary }}</p>
+				        </div>
+				        <div class="col-md-3 ">
+				          <div class="pv-30 ph-20 feature-box bordered bg-white text-center object-non-visible" data-animation-effect="fadeInDownSmall" data-effect-delay="100"> <span class="icon default-bg circle"><i class="fa fa-server"></i></span>
+				            <h4>{{ .Params.block1_title }}</h4>
+				            <div class="separator clearfix"></div>
+				            <p>{{ .Params.block1_text }}</p>
+				            <a href="{{ .Params.block1_link }}">Read More <i class="pl-5 fa fa-angle-double-right"></i></a> </div>
+				        </div>
+				        <div class="col-md-3 ">
+				          <div class="pv-30 ph-20 feature-box bordered bg-white text-center object-non-visible" data-animation-effect="fadeInDownSmall" data-effect-delay="150"> <span class="icon default-bg circle"><i class="fa fa-cubes"></i></span>
+				            <h4>{{ .Params.block2_title }}</h4>
+				            <div class="separator clearfix"></div>
+				            <p>{{ .Params.block2_text }}</p>
+				            <a href="{{ .Params.block2_link }}">Read More <i class="pl-5 fa fa-angle-double-right"></i></a> </div>
+				        </div>
+				        <div class="col-md-3 ">
+				          <div class="pv-30 ph-20 feature-box bordered bg-white text-center object-non-visible" data-animation-effect="fadeInDownSmall" data-effect-delay="200"> <span class="icon default-bg circle"><i class="fa fa-exchange"></i></span>
+				            <h4>{{ .Params.block3_title }}</h4>
+				            <div class="separator clearfix"></div>
+				            <p>{{ .Params.block3_text }}</p>
+				            <a href="{{ .Params.block3_link }}">Read More <i class="pl-5 fa fa-angle-double-right"></i></a> </div>
+				        </div>
+				        <div class="col-md-3 ">
+				          <div class="pv-30 ph-20 feature-box bordered bg-white text-center object-non-visible" data-animation-effect="fadeInDownSmall" data-effect-delay="200"> <span class="icon default-bg circle"><i class="fa fa-skyatlas"></i></span>
+				            <h4>{{ .Params.block4_title }}</h4>
+				            <div class="separator clearfix"></div>
+				            <p>{{ .Params.block4_text }}</p>
+				            <a href="{{ .Params.block4_link }}">Read More <i class="pl-5 fa fa-angle-double-right"></i></a> </div>
+				        </div>
+					{{ end }}
+                {{ end }}
+        {{ end }}
+      </div>
+    </div>
+</section>-->
+
+<!-- SECTION -->
+			<section class="alternate">
+				<div class="container">
+					
+					<div class="row">
+
+						<div class="col-md-6 col-sm-6"><!-- left image -->
+							<!-- add class "controlls-over" if you need the button controlls over the image -->
+							<div class="owl-carousel controlls-over" data-plugin-options='{"items": 1, "autoHeight": true, "navigation": true, "pagination": false, "transitionStyle":"fadeUp"}'><!-- transitionStyle: fade, backSlide, goDown, fadeUp,  -->
+								<div>
+									<img alt="" class="img-responsive" src="/images/demo/about_1.jpg">
+								</div>
+								<div>
+									<img alt="" class="img-responsive" src="/images/demo/about_2.jpg">
+								</div>
+							</div>
+						</div><!-- /left image -->
+
+						<div class="col-md-6 col-sm-6">
+							<h3><strong>Amazing</strong> tools to build <strong>awesome</strong> websites</h3>
+							<ul class="list-icon spaced check-circle">
+								<li>Fully responsive so your content will always look good on any device</li>
+								<li>Cool sliders give you the opportunity to showcase your content</li>
+								<li>Advanced template options to easily customize your website</li>
+								<li>Multiple layout options for home pages, portfolio, shop and blog</li>
+								<li>Incredible shortcodes for easy customization</li>
+								<li>Free lifetime update because we care about your website as much as you</li>
+							</ul>
+							
+							<div class="margin-top20"><!-- buttons -->
+								<a href="#purchase" target="_blank" rel="nofollow" class="btn btn-primary">PURCHASE EPONA</a>
+								<a href="index-why.html" class="btn btn-default">WHY US?</a>
+							</div><!-- /buttons -->
+
+						</div>
+
+					</div>
+
+				</div>
+			</section>
+			<!-- /SECTION -->
