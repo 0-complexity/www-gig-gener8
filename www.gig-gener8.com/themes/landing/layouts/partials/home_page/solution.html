@@ -1,46 +1,28 @@
-<!-- {{ range $element :=  .Data.Pages }}
-  {{ if eq .Section "home" }}
-      {{ if eq .Title "howitworks_box" }}
-        <section id="how-it-works" class="pv-30 padding-bottom-clear clearfix">
-        	    <div class="container">
-                    <div class="row">
-                        <div class="col-md-8 col-md-offset-2">
-                            <h2 class="text-center">{{ .Params.header }}</h2>
-                            <div class="separator"></div>
-                            <p style="margin-bottom: 0" class="large text-center">{{ .Params.summary }}</p>
-                            <img src="/images/how-it-works.png">
-                        </div>
-                    </div>
-        	    </div>
-          </section>
-          <hr />
-    {{ end }}
-  {{ end }}
-{{ end }}
- -->
-
+{{ range $element :=  .Data.Pages }}
+   {{ if eq .Section "home" }}
+       {{ if eq .Title "solution_section" }}
  <!-- SECTION -->
       <section>
         <div class="container">
-          
-          
+
+
           <header class="text-center">
-            <h2>We Are Dedicated To Our Customers</h2>
-            <p class="lead">We thrive on making Epona the most complete and trusted template on wrapbootstrap</p>
+            <h2>{{ .Params.header }}</h2>
+            <p class="lead">{{ .Params.summary }}</p>
             <div class="divider half-margins"><!-- divider --></div>
           </header>
 
-          
+
           <div class="row">
 
             <div class="col-md-4 col-sm-6">
-              <h4>Passion</h4>
-              <p class="dropcap">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam et elementum erat, biluctus mi. Quisque consequat risus quis tincidunt fringilla. Ut sed rhoncus metus, in rhoncus dolor. Integer tempor ligula est, sed luctus metus tempus a. Pellentesque tempor libero et arcu bibendum mollis. Aliquam eu odio eget diam egestas euismod vel sed orc aenean.</p>
+              <h4>{{ .Params.section1_header }}</h4>
+              <p class="dropcap">{{ .Params.section1_text }}</p>
             </div>
 
             <div class="col-md-4 col-sm-6">
-              <h4>Precision</h4>
-              <p>Pellentesque tempor libero et arcu bibendum mollis. Donec eu porta elit. Aliquam porta sollicitudin ante, ac fermentum orci mattis et. Phasellus ac nibh eleifend, sagittis purus nec, elementum massa. Quisque tincidunt sapien a sem porttitor, id convallis dolor pharetra. Donec tempor cursus facilisis. Ut eu elementum arcu, vel hendrerit nisi. Cras sed euismod nibh, a adipiscing.</p>
+              <h4>{{ .Params.section2_header }}</h4>
+              <p>{{ .Params.section2_text }}</p>
             </div>
 
             <div class="col-md-4 col-sm-12">
@@ -52,13 +34,13 @@
                     <h4 class="panel-title">
                       <a data-toggle="collapse" data-parent="#accordion2" href="#acordion_1">
                         <i class="fa fa-plus"></i>
-                        Our Company Mission
+                        {{ .Params.accordion1_header }}
                       </a>
                     </h4>
                   </div>
                   <div id="acordion_1" class="collapse">
                     <div class="panel-body">
-                      Lorem Ipsum, tellus ac cursus commodo, mauris sit condim eser ntumsi nibh, uum a justo vitaes amet risus amets un. Posi sectetut amet fermntum orem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia.
+                      {{ .Params.accordion1_text }}
                     </div>
                   </div>
                 </div>
@@ -67,13 +49,13 @@
                     <h4 class="panel-title">
                       <a data-toggle="collapse" data-parent="#accordion2" href="#acordion_2">
                         <i class="fa fa-plus"></i>
-                        The Epona Inside
+                        {{ .Params.accordion2_header }}
                       </a>
                     </h4>
                   </div>
                   <div id="acordion_2" class="collapse">
                     <div class="panel-body">
-                      Lorem Ipsum, tellus ac cursus commodo, mauris sit condim eser ntumsi nibh, uum a justo vitaes amet risus amets un. Posi sectetut amet fermntum orem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia.
+                      {{ .Params.accordion2_text }}
                     </div>
                   </div>
                 </div>
@@ -82,13 +64,13 @@
                     <h4 class="panel-title">
                       <a data-toggle="collapse" data-parent="#accordion2" href="#acordion_3">
                         <i class="fa fa-plus"></i>
-                        The Epona Philosophy
+                        {{ .Params.accordion3_header }}
                       </a>
                     </h4>
                   </div>
                   <div id="acordion_3" class="collapse">
                     <div class="panel-body">
-                      Lorem Ipsum, tellus ac cursus commodo, mauris sit condim eser ntumsi nibh, uum a justo vitaes amet risus amets un. Posi sectetut amet fermntum orem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia.
+                      {{ .Params.accordion3_text }}
                     </div>
                   </div>
                 </div>
@@ -97,13 +79,13 @@
                     <h4 class="panel-title">
                       <a data-toggle="collapse" data-parent="#accordion3" href="#acordion_4">
                         <i class="fa fa-plus"></i>
-                        Join our great team
+                        {{ .Params.accordion4_header }}
                       </a>
                     </h4>
                   </div>
                   <div id="acordion_4" class="collapse">
                     <div class="panel-body">
-                      Lorem Ipsum, tellus ac cursus commodo, mauris sit condim eser ntumsi nibh, uum a justo vitaes amet risus amets un. Posi sectetut amet fermntum orem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia.
+                      {{ .Params.accordion4_text }}
                     </div>
                   </div>
                 </div>
@@ -117,3 +99,6 @@
         </div>
       </section>
       <!-- /SECTION -->
+      {{ end }}
+    {{ end }}
+{{ end }}
