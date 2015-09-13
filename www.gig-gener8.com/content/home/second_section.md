@@ -21,7 +21,7 @@ li_5 = "Incredible shortcodes for easy customization"
 li_6 = "Free lifetime update because we care about your website as much as you" 
 
 button1 = "PURCHASE EPONA" 
-button2 = " WHY US?
+button2 = " WHY US?"
 link_button1 = "#purchase"
 link_button2 = "index-why.html"
 +++
