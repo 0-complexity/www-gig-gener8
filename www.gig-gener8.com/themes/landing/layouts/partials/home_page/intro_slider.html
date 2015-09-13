@@ -1,286 +1,53 @@
-<!-- <div class="banner clearfix">
-    <div class="slideshow">
-      <div class="slider-banner-container">
-        <div class="slider-banner-fullscreen">
-          <ul class="slides">
-            {{ range $element :=  .Site.Pages }}
-                {{ if eq .Section "home" }}
-                    {{ if eq .Title "intro_slider_box" }}
-                        <li data-transition="random-static" data-slotamount="7" data-masterspeed="500" data-saveperformance="on" data-title=""> <img src="{{ .Params.slide1_image }}" alt="slidebg1" data-bgposition="center top"  data-bgrepeat="no-repeat" data-bgfit="cover">
-                        <a style="display: block;" href="{{ .Params.slide1_link }}">
-                          <div class="tp-caption dark-translucent-bg"
-                                                data-x="center"
-                                                data-y="bottom"
-                                                data-speed="500"
-                                                data-easing="easeOutQuad"
-                                                data-start="0"> </div>
-                          <div style="font-size: 47px;" style="font-size: 47px;" class="tp-caption sft fadeout text-center large_white"
-                                                data-x="center"
-                                                data-y="210"
-                                                data-speed="500"
-                                                data-easing="easeOutQuad"
-                                                data-start="0"
-                                                >
-                            {{ .Params.slide1_title }} </div>
-
-                          <div class="tp-caption ZoomIn fadeout text-center tp-resizeme large_white"
-                                                data-x="center"
-                                                data-y="250"
-                                                data-speed="500"
-                                                data-easing="easeOutQuad">
-                           <div class="separator light"></div>
-                          </div>
-                          <div style="font-size: 29px;" class="tp-caption sft fadeout medium_white text-center"
-                                                data-x="center"
-                                                data-y="300"
-                                                data-speed="500"
-                                                data-easing="easeOutQuad"
-                                                data-endspeed="600">{{ .Params.slide1_text }}<br><br>
-                                                <strong>More info</strong>
-                                                </div>
-                          <div class="tp-caption fade fadeout"
-                                                data-x="center"
-                                                data-y="bottom"
-                                                data-voffset="100"
-                                                data-speed="500"
-                                                data-easing="easeOutQuad"
-                                                data-endspeed="200"> <a style="display: block;" href="#page-start" class="btn btn-lg moving smooth-scroll"><i class="icon-down-open-big"></i><i class="icon-down-open-big"></i><i class="icon-down-open-big"></i></a> </div></a>
-                        </li>
-                        <li data-transition="random-static" data-slotamount="7" data-masterspeed="500" data-saveperformance="on" data-title=""> <img src="{{ .Params.slide2_image }}" alt="slidebg1" data-bgposition="center top"  data-bgrepeat="no-repeat" data-bgfit="cover">
-                        <a style="display: block;" href="{{ .Params.slide2_link }}">
-                          <div class="tp-caption dark-translucent-bg"
-                                                data-x="center"
-                                                data-y="bottom"
-                                                data-speed="500"
-                                                data-easing="easeOutQuad"
-                                                data-start="0"> </div>
-                          <div style="font-size: 47px;" class="tp-caption sft fadeout text-center large_white"
-                                                data-x="center"
-                                                data-y="220"
-                                                data-speed="500"
-                                                data-easing="easeOutQuad"
-                                                data-start="0"
-                                                >
-                            {{ .Params.slide2_title }} </div>
-
-                          <div class="tp-caption ZoomIn fadeout text-center tp-resizeme large_white"
-                                                data-x="center"
-                                                data-y="250"
-                                                data-speed="500"
-                                                data-easing="easeOutQuad">
-                           <div class="separator light"></div>
-                          </div>
-                          <div style="font-size: 29px;" class="tp-caption sft fadeout medium_white text-center"
-                                                data-x="center"
-                                                data-y="280"
-                                                data-speed="500"
-                                                data-easing="easeOutQuad"
-                                                data-endspeed="600">{{ .Params.slide2_text }}<br><br>
-                                                <strong>More info</strong>
-                                                </div>
-                          <div class="tp-caption fade fadeout"
-                                                data-x="center"
-                                                data-y="bottom"
-                                                data-voffset="100"
-                                                data-speed="500"
-                                                data-easing="easeOutQuad"
-                                                data-endspeed="200"> <a style="display: block;" href="#page-start" class="btn btn-lg moving smooth-scroll"><i class="icon-down-open-big"></i><i class="icon-down-open-big"></i><i class="icon-down-open-big"></i></a> </div></a>
-                        </li>
-                        <li data-transition="random-static" data-slotamount="7" data-masterspeed="500" data-saveperformance="on" data-title=""> <img src="{{ .Params.slide3_image }}" alt="slidebg1" data-bgposition="center top"  data-bgrepeat="no-repeat" data-bgfit="cover">
-                        <a style="display: block;" href="{{ .Params.slide3_link }}">
-                          <div class="tp-caption dark-translucent-bg"
-                                                data-x="center"
-                                                data-y="bottom"
-                                                data-speed="500"
-                                                data-easing="easeOutQuad"
-                                                data-start="0"> </div>
-                          <div style="font-size: 47px;" class="tp-caption sft fadeout text-center large_white"
-                                                data-x="center"
-                                                data-y="220"
-                                                data-speed="500"
-                                                data-easing="easeOutQuad"
-                                                data-start="0"
-                                                >
-                            {{ .Params.slide3_title }} </div>
-
-                          <div class="tp-caption ZoomIn fadeout text-center tp-resizeme large_white"
-                                                data-x="center"
-                                                data-y="250"
-                                                data-speed="500"
-                                                data-easing="easeOutQuad">
-                           <div class="separator light"></div>
-                          </div>
-                          <div style="font-size: 29px;" class="tp-caption sft fadeout medium_white text-center"
-                                                data-x="center"
-                                                data-y="300"
-                                                data-speed="500"
-                                                data-easing="easeOutQuad"
-                                                data-endspeed="600">{{ .Params.slide3_text }} <br><br>
-                                                <strong>More info</strong>
-                                                </div>
-                          <div class="tp-caption fade fadeout"
-                                                data-x="center"
-                                                data-y="bottom"
-                                                data-voffset="100"
-                                                data-speed="500"
-                                                data-easing="easeOutQuad"
-                                                data-endspeed="200"> <a style="display: block;" href="#page-start" class="btn btn-lg moving smooth-scroll"><i class="icon-down-open-big"></i><i class="icon-down-open-big"></i><i class="icon-down-open-big"></i></a> </div></a>
-                        </li>
-                        <li data-transition="random-static" data-slotamount="7" data-masterspeed="500" data-saveperformance="on" data-title=""> <img src="{{ .Params.slide4_image }}" alt="slidebg1" data-bgposition="center top"  data-bgrepeat="no-repeat" data-bgfit="cover">
-                        <a style="display: block;" href="{{ .Params.slide4_link }}">
-                          <div class="tp-caption dark-translucent-bg"
-                                                data-x="center"
-                                                data-y="bottom"
-                                                data-speed="500"
-                                                data-easing="easeOutQuad"
-                                                data-start="0"> </div>
-                          <div style="font-size: 47px;" class="tp-caption sft fadeout text-center large_white"
-                                                data-x="center"
-                                                data-y="220"
-                                                data-speed="500"
-                                                data-easing="easeOutQuad"
-                                                data-start="0"
-                                                >
-                            {{ .Params.slide4_title }} </div>
-
-                          <div class="tp-caption ZoomIn fadeout text-center tp-resizeme large_white"
-                                                data-x="center"
-                                                data-y="250"
-                                                data-speed="500"
-                                                data-easing="easeOutQuad">
-                           <div class="separator light"></div>
-                          </div>
-                          <div style="font-size: 29px;" class="tp-caption sft fadeout medium_white text-center"
-                                                data-x="center"
-                                                data-y="300"
-                                                data-speed="500"
-                                                data-easing="easeOutQuad"
-                                                data-endspeed="600">{{ .Params.slide4_text }} 
-                                                <br><br>
-                                                <strong>More info</strong>
-                                                </div>
-                          <div class="tp-caption fade fadeout"
-                                                data-x="center"
-                                                data-y="bottom"
-                                                data-voffset="100"
-                                                data-speed="500"
-                                                data-easing="easeOutQuad"
-                                                data-endspeed="200"> <a style="display: block;" href="#page-start" class="btn btn-lg moving smooth-scroll"><i class="icon-down-open-big"></i><i class="icon-down-open-big"></i><i class="icon-down-open-big"></i></a> </div></a>
-                        </li>
-                        <li data-transition="random-static" data-slotamount="7" data-masterspeed="500" data-saveperformance="on" data-title=""> <img src="{{ .Params.slide5_image }}" alt="slidebg1" data-bgposition="center top"  data-bgrepeat="no-repeat" data-bgfit="cover">
-                        <a style="display: block;" href="{{ .Params.slide5_link }}">
-                          <div class="tp-caption dark-translucent-bg"
-                                                data-x="center"
-                                                data-y="bottom"
-                                                data-speed="500"
-                                                data-easing="easeOutQuad"
-                                                data-start="0"> </div>
-                          <div style="font-size: 47px;" class="tp-caption sft fadeout text-center large_white"
-                                                data-x="center"
-                                                data-y="220"
-                                                data-speed="500"
-                                                data-easing="easeOutQuad"
-                                                data-start="0"
-                                                >
-                            {{ .Params.slide5_title }} </div>
-
-                          <div class="tp-caption ZoomIn fadeout text-center tp-resizeme large_white"
-                                                data-x="center"
-                                                data-y="250"
-                                                data-speed="500"
-                                                data-easing="easeOutQuad">
-                           <div class="separator light"></div>
-                          </div>
-                          <div style="font-size: 29px;" class="tp-caption sft fadeout medium_white text-center"
-                                                data-x="center"
-                                                data-y="300"
-                                                data-speed="500"
-                                                data-easing="easeOutQuad"
-                                                data-endspeed="600">{{ .Params.slide5_text }} 
-                                                <br><br>
-                                                <strong>More info</strong>
-                                                </div>
-                          <div class="tp-caption fade fadeout"
-                                                data-x="center"
-                                                data-y="bottom"
-                                                data-voffset="100"
-                                                data-speed="500"
-                                                data-easing="easeOutQuad"
-                                                data-endspeed="200"> <a style="display: block;" href="#page-start" class="btn btn-lg moving smooth-scroll"><i class="icon-down-open-big"></i><i class="icon-down-open-big"></i><i class="icon-down-open-big"></i></a> </div></a>
-                        </li>
-                    {{ end }}
-                {{ end }}
-            {{ end }}
-
-          </ul>
-          <div class="tp-bannertimer"></div>
-        </div>
-      </div>
-    </div>
-</div>
-<div id="page-start"></div>
- -->
-
- <!-- REVOLUTION SLIDER -->
+<!-- REVOLUTION SLIDER -->
             <div class="slider fullwidthbanner-container roundedcorners">
                 <div class="fullwidthbanner">
                     <ul class="hide">
 
                         <!-- SLIDE  -->
+                        {{ range $element :=  .Site.Pages }}
+                            {{ if eq .Section "home" }}
+                                {{ if eq .Title "intro_slider_box" }}
                         <li data-transition="fade" data-slotamount="7" data-masterspeed="300" data-saveperformance="off" >
 
-                            <img src="/images/1x1.png" data-lazyload="/images/demo/wall.jpg" alt="" data-bgfit="cover" data-bgposition="center top" data-bgrepeat="no-repeat" />
+                            <img src="{{ .Params.slide1_image }}" data-lazyload="/images/demo/wall.jpg" alt="" data-bgfit="cover" data-bgposition="center top" data-bgrepeat="no-repeat" />
 
-                            <div class="tp-caption block_black lfb tp-resizeme" 
-                                data-x="center"
-                                data-y="80"  
-                                data-speed="1000" 
-                                data-start="500" 
+                           <div class="tp-caption block_black sfl tp-resizeme" 
+                                data-x="70" 
+                                data-y="172" 
+                                data-speed="750" 
+                                data-start="1000" 
                                 data-easing="easeOutExpo" 
                                 data-splitin="none" 
                                 data-splitout="none" 
                                 data-elementdelay="0.1" 
                                 data-endelementdelay="0.1" 
-                                data-endspeed="300">EPONA INCLUDES
+                                data-endspeed="300">{{ .Params.slide1_text1 }}
                             </div>
 
-                            <div class="tp-caption block_huge text-white lfb tp-resizeme" 
-                                data-x="center"
-                                data-y="130"  
-                                data-speed="1000" 
-                                data-start="800" 
+                            <div class="tp-caption block_black sfl tp-resizeme" 
+                                data-x="70" 
+                                data-y="216" 
+                                data-speed="750" 
+                                data-start="1400" 
                                 data-easing="easeOutExpo" 
                                 data-splitin="none" 
                                 data-splitout="none" 
                                 data-elementdelay="0.1" 
                                 data-endelementdelay="0.1" 
-                                data-endspeed="300">EVERYTHING 
+                                data-endspeed="300">{{ .Params.slide1_text2 }}
                             </div>
 
-                            <div class="tp-caption block_black lfb tp-resizeme" 
-                                data-x="center"
-                                data-y="280"  
-                                data-speed="1000" 
-                                data-start="1200" 
+                            <div class="tp-caption block_black sfr tp-resizeme" 
+                                data-x="70" 
+                                data-y="260" 
+                                data-speed="750" 
+                                data-start="1800" 
                                 data-easing="easeOutExpo" 
                                 data-splitin="none" 
                                 data-splitout="none" 
                                 data-elementdelay="0.1" 
                                 data-endelementdelay="0.1" 
-                                data-endspeed="300">you need to build incredible page layouts 
-                            </div>
-
-                            <div class="tp-caption lfb tp-resizeme" 
-                                data-x="center"
-                                data-y="350"  
-                                data-speed="1200" 
-                                data-start="2000" 
-                                data-easing="easeOutExpo" 
-                                data-splitin="none" 
-                                data-splitout="none" 
-                                data-elementdelay="0.1" 
-                                data-endelementdelay="0.1" 
-                                data-endspeed="300"><a href="#purchase" class="btn btn-primary">PURCHASE NOW</a>
+                                data-endspeed="300">{{ .Params.slide1_text3 }}
                             </div>
 
                         </li>
@@ -290,56 +57,43 @@
 
                             <img src="/images/1x1.png" data-lazyload="/images/demo/flickr_37.jpg" alt="" data-bgfit="cover" data-bgposition="center top" data-bgrepeat="no-repeat" />
 
-                            <div class="tp-caption mediumlarge_light_white lfb tp-resizeme" 
-                                data-x="left" data-hoffset="70"
-                                data-y="133" 
-                                data-speed="1000" 
-                                data-start="1400" 
+                            <div class="tp-caption block_black sfl tp-resizeme" 
+                                data-x="70" 
+                                data-y="172" 
+                                data-speed="750" 
+                                data-start="1000" 
                                 data-easing="easeOutExpo" 
                                 data-splitin="none" 
                                 data-splitout="none" 
                                 data-elementdelay="0.1" 
                                 data-endelementdelay="0.1" 
-                                data-endspeed="300">+ Amazing Layouts
-                            </div>
-
-                            <div class="tp-caption mediumlarge_light_white lft tp-resizeme" 
-                                data-x="left" data-hoffset="70"
-                                data-y="85" 
-                                data-speed="1000" 
-                                data-start="1200" 
-                                data-easing="easeOutExpo" 
-                                data-splitin="none" 
-                                data-splitout="none" 
-                                data-elementdelay="0.1" 
-                                data-endelementdelay="0.1" 
-                                data-endspeed="300">+ Awesome  Sliders
+                                data-endspeed="300">{{ .Params.slide2_text1 }}
                             </div>
 
                             <div class="tp-caption block_black sfl tp-resizeme" 
                                 data-x="70" 
                                 data-y="216" 
                                 data-speed="750" 
-                                data-start="1900" 
+                                data-start="1400" 
                                 data-easing="easeOutExpo" 
                                 data-splitin="none" 
                                 data-splitout="none" 
                                 data-elementdelay="0.1" 
                                 data-endelementdelay="0.1" 
-                                data-endspeed="300">Premium Sliders That Are Easy To Use With Any Content
+                                data-endspeed="300">{{ .Params.slide2_text2 }}
                             </div>
 
                             <div class="tp-caption block_black sfr tp-resizeme" 
                                 data-x="70" 
                                 data-y="260" 
                                 data-speed="750" 
-                                data-start="2200" 
+                                data-start="1800" 
                                 data-easing="easeOutExpo" 
                                 data-splitin="none" 
                                 data-splitout="none" 
                                 data-elementdelay="0.1" 
                                 data-endelementdelay="0.1" 
-                                data-endspeed="300">Loaded With Options, And Is Simply A Joy To Use
+                                data-endspeed="300">{{ .Params.slide2_text3 }}
                             </div>
 
                         </li>
@@ -359,7 +113,7 @@
                                 data-splitout="none" 
                                 data-elementdelay="0.1" 
                                 data-endelementdelay="0.1" 
-                                data-endspeed="300">Epona Multipurpose Template
+                                data-endspeed="300">{{ .Params.slide3_text1 }}
                             </div>
 
                             <div class="tp-caption block_black sfl tp-resizeme" 
@@ -372,7 +126,7 @@
                                 data-splitout="none" 
                                 data-elementdelay="0.1" 
                                 data-endelementdelay="0.1" 
-                                data-endspeed="300">Loaded With Options, And Is Simply A Joy To Use
+                                data-endspeed="300">{{ .Params.slide3_text2 }}
                             </div>
 
                             <div class="tp-caption block_black sfr tp-resizeme" 
@@ -385,11 +139,13 @@
                                 data-splitout="none" 
                                 data-elementdelay="0.1" 
                                 data-endelementdelay="0.1" 
-                                data-endspeed="300">Premium Sliders That Are Easy To Use With Any Content
+                                data-endspeed="300">{{ .Params.slide3_text3 }}
                             </div>
 
                         </li>
-
+                        {{ end }}
+                        {{ end }}
+                    {{ end }}
                     </ul>
                     <div class="tp-bannertimer"></div>
                 </div>
