@@ -2490,16 +2490,18 @@ section-title.invert-colors, .dark-bg .section-title {
     width: 30%;
     padding-right: 30px; }
     .footer-block .brand-col .brand {
-      text-align: right;
+      text-align: left;
       border-right: 1px solid rgba(255, 255, 255, 0.1);
       height: 230px;
-      position: relative; }
+      position: relative;
+      }
       .footer-block .brand-col .brand img {
         position: absolute;
         margin: auto 0;
-        right: 40px;
+        right: auto;
         top: 0;
-        bottom: 0; }
+        bottom: 0;
+        }
   .footer-block .links-col {
     width: 70%; }
   .footer-block .col-md-3 {
