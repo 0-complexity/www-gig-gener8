@@ -1,7 +1,7 @@
-{{ range $element :=  .Data.Pages }}
+<!--{{ range $element :=  .Data.Pages }}
    {{ if eq .Section "home" }}
        {{ if eq .Title "solution_section" }}
- <!-- SECTION -->
+
       <section id="solution">
         <div class="container">
 
@@ -9,7 +9,7 @@
           <header class="text-center">
             <h2>{{ .Params.header }}</h2>
             <p class="lead">{{ .Params.summary }}</p>
-            <div class="divider half-margins"><!-- divider --></div>
+            <div class="divider half-margins"></div>
           </header>
 
 
@@ -27,7 +27,7 @@
 
             <div class="col-md-4 col-sm-12">
 
-              <!-- ACCORDION -->
+             
               <div class="accordion panel-group transparent" id="accordion2">
                 <div class="panel panel-default">
                   <div class="panel-heading">
@@ -90,7 +90,7 @@
                   </div>
                 </div>
               </div>
-              <!-- /ACCORDION -->
+             
 
             </div>
 
@@ -98,7 +98,98 @@
 
         </div>
       </section>
-      <!-- /SECTION -->
+     
       {{ end }}
     {{ end }}
 {{ end }}
+
+
+
+
+
+
+-->
+
+<!-- Content Block
+      ============================================-->
+      <section class="content-block default-bg">
+      
+        <!-- Container -->
+        <div class="container cont-main">
+        
+          <!-- Section Title -->
+          <div class="section-title">
+            <h2>testimonials</h2>
+            <p>We are experts in both desktop and mobile design.</p>
+          </div>
+          <!-- Section Title -->
+          
+          <!-- Slider Wrapper -->
+          <div class="bx-controls-dark bx-controls-below bx-controls-box">
+          
+            <!-- BxSlider -->
+            <div class="bxslider" data-call="bxslider" data-options="pager:false, slideMargin: 30" data-breaks="[{screen:0, slides:1}, {screen:768, slides:2}]">
+              
+              <!-- Slide -->
+              <div class="slide">
+                <!-- hquote -->
+                <div class="hquote">
+                  <blockquote>
+                    <p><img class="avatar" src="images/face3.jpg" alt="">The trouble with having an open mind, of course, is that people will insist on coming along and trying to put things in it.</p>
+                    <small class="author-bottom"><a href="#">Mary Doe</a>, Business Owner</small>
+                  </blockquote>
+                </div>
+                <!-- /hquote -->
+              </div>
+              <!-- /Slide -->
+
+              <!-- Slide -->
+              <div class="slide">
+                <!-- hquote -->
+                <div class="hquote hquote-right">
+                  <blockquote>
+                    <p><img class="avatar" src="images/face1.jpg" alt="">The trouble with having an open mind, of course, is that people will insist on coming along and trying to put things in it.</p>
+                    <small class="author-bottom"><a href="#">Alice Wonder</a>, Actress</small>
+                  </blockquote>
+                </div>
+                <!-- /hquote -->
+              </div>
+              <!-- /Slide -->
+
+              <!-- Slide -->
+              <div class="slide">
+                <!-- hquote -->
+                <div class="hquote">
+                  <blockquote>
+                    <p><img class="avatar" src="images/face3.jpg" alt="">The trouble with having an open mind, of course, is that people will insist on coming along and trying to put things in it.</p>
+                    <small class="author-bottom"><a href="#">Mary Doe</a>, Business Owner</small>
+                  </blockquote>
+                </div>
+                <!-- /hquote -->
+              </div>
+              <!-- /Slide -->
+
+              <!-- Slide -->
+              <div class="slide">
+                <!-- hquote -->
+                <div class="hquote hquote-right">
+                  <blockquote>
+                    <p><img class="avatar" src="images/face1.jpg" alt="">The trouble with having an open mind, of course, is that people will insist on coming along and trying to put things in it.</p>
+                    <small class="author-bottom"><a href="#">Alice Wonder</a>, Actress</small>
+                  </blockquote>
+                </div>
+                <!-- /hquote -->
+              </div>
+              <!-- /Slide -->
+              
+            </div>
+            <!-- /BxSlider -->
+              
+          </div>
+          <!-- /Slider Wrapper -->
+        
+        </div>
+        <!-- /Container -->
+      </section>
+      <!-- /Content Block
+      ============================================-->

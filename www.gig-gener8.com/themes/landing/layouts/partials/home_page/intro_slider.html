@@ -1,9 +1,9 @@
-<!-- REVOLUTION SLIDER -->
+<!--
             <div class="slider fullwidthbanner-container roundedcorners">
                 <div class="fullwidthbanner">
                     <ul class="hide">
 
-                        <!-- SLIDE  -->
+                        
                         {{ range $element :=  .Site.Pages }}
                             {{ if eq .Section "home" }}
                                 {{ if eq .Title "intro_slider_box" }}
@@ -52,7 +52,7 @@
 
                         </li>
 
-                        <!-- SLIDE  -->
+                        
                         <li data-transition="fade" data-slotamount="7" data-masterspeed="300" data-saveperformance="off" >
 
                             <img src="/images/1x1.png" data-lazyload="{{ .Params.slide2_image }}" alt="" data-bgfit="cover" data-bgposition="center top" data-bgrepeat="no-repeat" />
@@ -98,7 +98,7 @@
 
                         </li>
 
-                        <!-- SLIDE  -->
+                        
                         <li data-transition="fade" data-slotamount="7" data-masterspeed="300" data-link="http://www.stepofweb.com/" data-target="_blank" data-saveperformance="off" >
 
                             <img src="/images/1x1.png" data-lazyload="{{ .Params.slide3_image }}" alt="" data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat" />
@@ -150,4 +150,114 @@
                     <div class="tp-bannertimer"></div>
                 </div>
             </div>
-            <!-- /REVOLUTION SLIDER -->
+            
+-->
+<!-- Intro Block
+      ============================================ -->
+      <div class="intro-block intro-slider-block light-bg">
+      
+        <!-- Container -->
+        <div class="container cont-main">
+        
+          <!-- Row -->
+          <div class="row">
+          
+            <!-- Col -->
+            <div class="col-xs-10 col-sm-10 col-md-9">
+            
+              <!-- Intro Slider Wrapper -->
+              <div class="intro-slider">
+              
+                <!-- BxSlider -->
+                <div class="bxslider" data-call="bxslider" data-options="{controls:false, pagerCustom: '#intro-pager'}">
+                  
+                  <!-- Slide -->
+                  <div class="slide">
+                    <!-- Text -->
+                    <div class="text">
+                      <small class="pcolor case-u bx-layer" data-anim="slideInDown" data-dur="1000" data-delay="400">multipurpose</small>
+                      <h1 class="bx-layer case-u" data-anim="slideInDown" data-dur="1000" data-delay="200" contenteditable="true">modular design</h1>
+                      <p class="bx-layer" data-anim="slideInDown" data-dur="1000" data-delay="0" contenteditable="true">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud.</p>
+                      <a class="btn btn-primary no-border btn-bigger bx-layer" data-anim="slideInUp" data-dur="1000" data-delay="600">learn more</a>
+                    </div>
+                    <!-- /Text -->
+                    <img class="img-main" src="images/screen-4.png" alt=""/>
+                  </div>
+                  <!-- /Slide -->
+                  
+                  <!-- Slide -->
+                  <div class="slide">
+                    <!-- Text -->
+                    <div class="text">
+                      <small class="pcolor case-u bx-layer" data-anim="slideInDown" data-dur="1000" data-delay="400">responsive</small>
+                      <h1 class="bx-layer case-u" data-anim="slideInDown" data-dur="1000" data-delay="200" contenteditable="true">bootstrap base</h1>
+                      <p class="bx-layer" data-anim="slideInDown" data-dur="1000" data-delay="0" contenteditable="true">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud.</p>
+                      <a class="btn btn-primary no-border btn-bigger bx-layer" data-anim="slideInUp" data-dur="1000" data-delay="600">learn more</a>
+                    </div>
+                    <!-- /Text -->
+                    <img class="img-main" src="images/screen-4.png" alt=""/>
+                  </div>
+                  <!-- /Slide -->
+                  
+                  <!-- Slide -->
+                  <div class="slide">
+                    <!-- Text -->
+                    <div class="text">
+                      <small class="pcolor case-u bx-layer" data-anim="slideInDown" data-dur="1000" data-delay="400">portable</small>
+                      <h1 class="bx-layer case-u" data-anim="slideInDown" data-dur="1000" data-delay="200" contenteditable="true">reusable blocks</h1>
+                      <p class="bx-layer" data-anim="slideInDown" data-dur="1000" data-delay="0" contenteditable="true">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud.</p>
+                      <a class="btn btn-primary no-border btn-bigger bx-layer" data-anim="slideInUp" data-dur="1000" data-delay="600">learn more</a>
+                    </div>
+                    <!-- /Text -->
+                    <img class="img-main" src="images/screen-4.png" alt="" />
+                  </div>
+                  <!-- /Slide -->
+                  
+                  <!-- Slide -->
+                  <div class="slide">
+                    <!-- Text -->
+                    <div class="text">
+                      <small class="pcolor case-u bx-layer" data-anim="slideInDown" data-dur="1000" data-delay="400">purchase once</small>
+                      <h1 class="bx-layer case-u" data-anim="slideInDown" data-dur="1000" data-delay="200" contenteditable="true">free updates</h1>
+                      <p class="bx-layer" data-anim="slideInDown" data-dur="1000" data-delay="0" contenteditable="true">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud.</p>
+                      <a class="btn btn-primary no-border btn-bigger bx-layer" data-anim="slideInUp" data-dur="1000" data-delay="600">learn more</a>
+                    </div>
+                    <!-- /Text -->
+                    <img class="img-main" src="images/screen-4.png" alt=""/>
+                  </div>
+                  <!-- /Slide -->
+                  
+                </div>
+                <!-- /BxSlider -->
+                
+              </div>
+              <!-- Intro Slider -->
+              
+            </div>
+            <!-- /Col -->
+            
+            <!-- Col -->
+            <div class="col-xs-2 col-sm-2 col-md-3">
+              <div class="pager-block vcenter">
+                <div class="vcenter-this">
+                  <!-- Pager -->
+                  <div id="intro-pager" class="tab-pager">
+                    <a data-slide-index="0" href="#"><i class="icon fa  fa-apple"></i><span>Multipurpose Theme</span></a>
+                    <a data-slide-index="1" href="#"><i class="icon fa fa-folder"></i><span>Fully Responsive</span></a>
+                    <a data-slide-index="2" href="#"><i class="icon fa fa-rocket"></i><span>portable uikit</span></a>
+                    <a data-slide-index="3" href="#"><i class="icon fa fa-desktop"></i><span>free updates</span></a>
+                  </div>
+                  <!-- /Pager -->
+                </div>
+              </div>
+            </div>
+            <!-- /Col -->
+            
+          </div>
+          <!-- /Row -->
+        </div>
+        <!-- /Container -->
+      
+      </div>
+      <!-- /Intro Block
+      ============================================ -->

@@ -1,54 +1,4 @@
-<!--<style type="text/css">
-	.text-dark, .text-dark h4 {color: #777777;}
-	.pv-30.ph-20.feature-box.bordered.bg-white.text-center.object-non-visible.animated.object-visible.fadeInDownSmall a { color: #777777;}
-</style>
-<section id="our-magic" class="default-bg pv-30 clearfix text-dark">
-    <div class="container">
-      <div class="row">
-        {{ range $element :=  .Data.Pages }}
-                {{ if eq .Section "home" }}
-                    {{ if eq .Title "magic_box" }}
-				        <div class="col-md-8 col-md-offset-2">
-				          <h2 id="solutions" class="text-center">{{ .Params.header }}</h2>
-				          <div class="separator"></div>
-				          <p class="large text-center text-white">{{ .Params.summary }}</p>
-				        </div>
-				        <div class="col-md-3 ">
-				          <div class="pv-30 ph-20 feature-box bordered bg-white text-center object-non-visible" data-animation-effect="fadeInDownSmall" data-effect-delay="100"> <span class="icon default-bg circle"><i class="fa fa-server"></i></span>
-				            <h4>{{ .Params.block1_title }}</h4>
-				            <div class="separator clearfix"></div>
-				            <p>{{ .Params.block1_text }}</p>
-				            <a href="{{ .Params.block1_link }}">Read More <i class="pl-5 fa fa-angle-double-right"></i></a> </div>
-				        </div>
-				        <div class="col-md-3 ">
-				          <div class="pv-30 ph-20 feature-box bordered bg-white text-center object-non-visible" data-animation-effect="fadeInDownSmall" data-effect-delay="150"> <span class="icon default-bg circle"><i class="fa fa-cubes"></i></span>
-				            <h4>{{ .Params.block2_title }}</h4>
-				            <div class="separator clearfix"></div>
-				            <p>{{ .Params.block2_text }}</p>
-				            <a href="{{ .Params.block2_link }}">Read More <i class="pl-5 fa fa-angle-double-right"></i></a> </div>
-				        </div>
-				        <div class="col-md-3 ">
-				          <div class="pv-30 ph-20 feature-box bordered bg-white text-center object-non-visible" data-animation-effect="fadeInDownSmall" data-effect-delay="200"> <span class="icon default-bg circle"><i class="fa fa-exchange"></i></span>
-				            <h4>{{ .Params.block3_title }}</h4>
-				            <div class="separator clearfix"></div>
-				            <p>{{ .Params.block3_text }}</p>
-				            <a href="{{ .Params.block3_link }}">Read More <i class="pl-5 fa fa-angle-double-right"></i></a> </div>
-				        </div>
-				        <div class="col-md-3 ">
-				          <div class="pv-30 ph-20 feature-box bordered bg-white text-center object-non-visible" data-animation-effect="fadeInDownSmall" data-effect-delay="200"> <span class="icon default-bg circle"><i class="fa fa-skyatlas"></i></span>
-				            <h4>{{ .Params.block4_title }}</h4>
-				            <div class="separator clearfix"></div>
-				            <p>{{ .Params.block4_text }}</p>
-				            <a href="{{ .Params.block4_link }}">Read More <i class="pl-5 fa fa-angle-double-right"></i></a> </div>
-				        </div>
-					{{ end }}
-                {{ end }}
-        {{ end }}
-      </div>
-    </div>
-</section>-->
-
-<!-- SECTION -->
+<!--
 			<section id="whatWeDo" class="alternate">
 				<div class="container">
 			{{ range $element :=  .Data.Pages }}
@@ -61,9 +11,9 @@
 						</div>
 					</header>
 					<div class="row">
-						<div class="col-md-6 col-sm-6"><!-- left image -->
-							<!-- add class "controlls-over" if you need the button controlls over the image -->
-							<div class="owl-carousel controlls-over" data-plugin-options='{"items": 1, "autoHeight": true, "navigation": true, "pagination": false, "transitionStyle":"fadeUp"}'><!-- transitionStyle: fade, backSlide, goDown, fadeUp,  -->
+						<div class="col-md-6 col-sm-6">
+							
+							<div class="owl-carousel controlls-over" data-plugin-options='{"items": 1, "autoHeight": true, "navigation": true, "pagination": false, "transitionStyle":"fadeUp"}'>fadeUp,  
 								<div>
 									<img alt="" class="img-responsive" src="{{ .Params.small_slider1 }}">
 								</div>
@@ -74,7 +24,7 @@
 									<img alt="" class="img-responsive" src="{{ .Params.small_slider3 }}">
 								</div>
 							</div>
-						</div><!-- /left image -->
+						</div>
 
 						<div class="col-md-6 col-sm-6">
 							<h3><strong>{{ .Params.text_bold }} </strong> {{ .Params.text_not_bold }}</h3>
@@ -87,10 +37,10 @@
 								<li>{{.Params.li_6}}</li>
 							</ul>
 
-							<div class="margin-top20"><!-- buttons -->
+							<div class="margin-top20">
 								<a href="{{ .Params.link_button1 }}" target="_blank" rel="nofollow" class="btn btn-primary">{{ .Params.button1 }}</a>
 								<a href="{{ .Params.link_button1 }}" class="btn btn-default">{{ .Params.button2 }}</a>
-							</div><!-- /buttons -->
+							</div>
 
 						</div>
 						{{end}}
@@ -100,4 +50,244 @@
 
 				</div>
 			</section>
-			<!-- /SECTION -->
+			
+-->
+
+<!-- Tab Slider
+      ================================================== -->
+      <section id="work" class="content-block tab-slider tab-layout bcolor-bg">
+      
+        <!-- Container (for alignment)-->
+        <div class="container page-align nav-cont">
+          <!-- Nav Block -->
+          <nav class="nav-panel">
+            <div class="vcenter">
+
+              <div class="vcenter-this">
+              <!-- Tab Pager -->
+                <div id="projects-pager" class="img-links clearfix">
+                  <a data-slide-index="0" href="#"><div class="wrapper"><span><i class="icon">1</i></span><img src="images/portfolio/pic1.jpg" alt="pic"/></div></a>
+                  <a data-slide-index="1" href="#"><div class="wrapper"><span><i class="icon">2</i></span><img src="images/portfolio/pic2.jpg" alt="pic"/></div></a>
+                  <a data-slide-index="2" href="#"><div class="wrapper"><span><i class="icon">3</i></span><img src="images/portfolio/pic3.jpg" alt="pic"/></div></a>
+                  <a data-slide-index="3" href="#"><div class="wrapper"><span><i class="icon">4</i></span><img src="images/portfolio/pic4.jpg" alt="pic"/></div></a>
+                  <a data-slide-index="4" href="#"><div class="wrapper"><span><i class="icon">5</i></span><img src="images/portfolio/pic5.jpg" alt="pic"/></div></a>
+                  <a data-slide-index="5" href="#"><div class="wrapper"><span><i class="icon">6</i></span><img src="images/portfolio/pic6.jpg" alt="pic"/></div></a>
+                </div>
+                <!-- /Tab Pager -->
+                </div>
+            </div>
+
+          </nav>
+          <!-- /Nav Block -->
+
+          
+        </div>
+        <!-- /Container -->
+        
+        <div class="bx-controls-box bx-controls-bottom-right">
+        <!-- BxSlider -->
+        <div class="bxslider" data-call="bxslider" data-bxid="projectsSlider" data-options="{pagerCustom:'#projects-pager', controls:false}" data-breaks="[{screen:0, mode:'horizontal', controls:true}, {screen:992, mode: 'vertical'}]">
+          <!-- Tab 1-->
+          <div class="tab">
+            <!-- Pic -->
+            <div class="pic-panel">
+              <img src="images/portfolio/pic1.jpg" alt="pic"/>     
+            </div>
+            <!-- /Pic -->
+            <!-- Icon -->
+            <div class="tab-icon">
+              <i class="icon ti ti-apple"></i>
+            </div>
+            <!-- /Icon -->
+            <!-- Container (for alignment) -->
+            <div class="container page-align">
+              <!-- Text -->
+              <div class="text-panel">
+                <div class="info vcenter">
+                  <div class="vcenter-this">
+                  
+                    <a class="case-u categ"><small>projects / recent</small></a>
+                    <h4>First Project</h4>
+                    <p>The trouble with having an open mind, of course, is that many people will insist on coming along and trying to put things inside it.</p>
+                    <a class="btn btn-primary hidden-xs" href="#">read more</a>
+                    
+                  </div>
+                </div>
+              </div>
+               <!-- /Text -->       
+            </div>
+            <!-- /Container -->
+          </div>
+          <!-- /Tab 1 -->
+          
+          <!-- Tab 2 -->
+          <div class="tab">
+            <!-- Pic -->
+            <div class="pic-panel">
+              <img src="images/portfolio/pic2.jpg" alt="pic"/>     
+            </div>
+            <!-- /Pic -->
+            <!-- Icon -->
+            <div class="tab-icon">
+              <i class="icon ti ti-music-alt"></i>
+            </div>
+            <!-- /Icon -->
+            <!-- Container (for alignment) -->
+            <div class="container page-align">
+              <!-- Text -->
+              <div class="text-panel">
+                <div class="info vcenter">
+                  <div class="vcenter-this">
+                  
+                    <a class="case-u categ"><small>projects / recent</small></a>
+                    <h4>Second Project</h4>
+                    <p>The trouble with having an open mind, of course, is that many people will insist on coming along and trying to put things inside it.</p>
+                    <a class="btn btn-white hidden-xs" href="#">read more</a>
+                    
+                  </div>
+                </div>
+              </div>
+               <!-- /Text -->       
+            </div>
+            <!-- /Container -->
+          </div>
+          <!-- /Tab 2 -->
+          
+          <!-- Tab 3 -->
+          <div class="tab">
+            <!-- Pic -->
+            <div class="pic-panel">
+              <img src="images/portfolio/pic3.jpg" alt="pic"/>     
+            </div>
+            <!-- /Pic -->
+            <!-- Icon -->
+            <div class="tab-icon">
+              <i class="icon ti ti-tablet"></i>
+            </div>
+            <!-- /Icon -->
+            <!-- Container (for alignment) -->
+            <div class="container page-align">
+              <!-- Text -->
+              <div class="text-panel">
+                <div class="info vcenter">
+                  <div class="vcenter-this">
+                  
+                    <a class="case-u categ"><small>projects / recent</small></a>
+                    <h4>Third Project</h4>
+                    <p>The trouble with having an open mind, of course, is that many people will insist on coming along and trying to put things inside it.</p>
+                    <a class="btn btn-white hidden-xs" href="#">read more</a>
+                    
+                  </div>
+                </div>
+              </div>
+               <!-- /Text -->       
+            </div>
+            <!-- /Container -->
+          </div>
+          <!-- /Tab 3 -->
+          
+          <!-- Tab 4 -->
+          <div class="tab">
+            <!-- Pic -->
+            <div class="pic-panel">
+              <img src="images/portfolio/pic4.jpg" alt="pic"/>     
+            </div>
+            <!-- /Pic -->
+            <!-- Icon -->
+            <div class="tab-icon">
+              <i class="icon ti ti-stats-up"></i>
+            </div>
+            <!-- /Icon -->
+            <!-- Container (for alignment) -->
+            <div class="container page-align">
+              <!-- Text -->
+              <div class="text-panel">
+                <div class="info vcenter">
+                  <div class="vcenter-this">
+                  
+                    <a class="case-u categ"><small>projects / recent</small></a>
+                    <h4>Fourth Project</h4>
+                    <p>The trouble with having an open mind, of course, is that many people will insist on coming along and trying to put things inside it.</p>
+                    <a class="btn btn-white hidden-xs" href="#">read more</a>
+                    
+                  </div>
+                </div>
+              </div>
+               <!-- /Text -->       
+            </div>
+            <!-- /Container -->
+          </div>
+          <!-- /Tab 4 -->
+          
+          <!-- Tab 5 -->
+          <div class="tab">
+            <!-- Pic -->
+            <div class="pic-panel">
+              <img src="images/portfolio/pic5.jpg" alt="pic"/>     
+            </div>
+            <!-- /Pic -->
+            <!-- Icon -->
+            <div class="tab-icon">
+              <i class="icon ti ti-paint-bucket"></i>
+            </div>
+            <!-- /Icon -->
+            <!-- Container (for alignment) -->
+            <div class="container page-align">
+              <!-- Text -->
+              <div class="text-panel">
+                <div class="info vcenter">
+                  <div class="vcenter-this">
+                  
+                    <a class="case-u categ"><small>projects / recent</small></a>
+                    <h4>Fifth Project</h4>
+                    <p>The trouble with having an open mind, of course, is that many people will insist on coming along and trying to put things inside it.</p>
+                    <a class="btn btn-white hidden-xs" href="#">read more</a>
+                    
+                  </div>
+                </div>
+              </div>
+               <!-- /Text -->       
+            </div>
+            <!-- /Container -->
+          </div>
+          <!-- /Tab 5 -->
+          
+          <!-- Tab 6 -->
+          <div class="tab">
+            <!-- Pic -->
+            <div class="pic-panel">
+              <img src="images/portfolio/pic6.jpg" alt="pic"/>     
+            </div>
+            <!-- /Pic -->
+            <!-- Icon -->
+            <div class="tab-icon">
+              <i class="icon ti ti-heart"></i>
+            </div>
+            <!-- /Icon -->
+            <!-- Container (for alignment) -->
+            <div class="container page-align">
+              <!-- Text -->
+              <div class="text-panel">
+                <div class="info vcenter">
+                  <div class="vcenter-this">
+                  
+                    <a class="case-u categ"><small>projects / recent</small></a>
+                    <h4>Sixth Project</h4>
+                    <p>The trouble with having an open mind, of course, is that many people will insist on coming along and trying to put things inside it.</p>
+                    <a class="btn btn-white hidden-xs" href="#">read more</a>
+                    
+                  </div>
+                </div>
+              </div>
+               <!-- /Text -->       
+            </div>
+            <!-- /Container -->
+          </div>
+          <!-- /Tab 6 -->
+        </div>
+        <!-- /BxSlider -->
+        </div>
+        
+      </section>
+      <!-- /Tab Slider
+      ================================================== -->
