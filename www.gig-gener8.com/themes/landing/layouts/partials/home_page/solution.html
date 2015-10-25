@@ -1,181 +1,75 @@
-<!--{{ range $element :=  .Data.Pages }}
+<!-- Intro Block
+============================================ -->
+{{ range $element :=  .Data.Pages }}
    {{ if eq .Section "home" }}
        {{ if eq .Title "solution_section" }}
-
-      <section id="solution">
-        <div class="container">
-
-
-          <header class="text-center">
-            <h2>{{ .Params.header }}</h2>
-            <p class="lead">{{ .Params.summary }}</p>
-            <div class="divider half-margins"></div>
-          </header>
-
-
-          <div class="row">
-
-            <div class="col-md-4 col-sm-6">
-              <h4>{{ .Params.section1_header }}</h4>
-              <p class="dropcap">{{ .Params.section1_text }}</p>
-            </div>
-
-            <div class="col-md-4 col-sm-6">
-              <h4>{{ .Params.section2_header }}</h4>
-              <p>{{ .Params.section2_text }}</p>
-            </div>
-
-            <div class="col-md-4 col-sm-12">
-
-             
-              <div class="accordion panel-group transparent" id="accordion2">
-                <div class="panel panel-default">
-                  <div class="panel-heading">
-                    <h4 class="panel-title">
-                      <a data-toggle="collapse" data-parent="#accordion2" href="#acordion_1">
-                        <i class="fa fa-plus"></i>
-                        {{ .Params.accordion1_header }}
-                      </a>
-                    </h4>
-                  </div>
-                  <div id="acordion_1" class="collapse">
-                    <div class="panel-body">
-                      {{ .Params.accordion1_text }}
-                    </div>
-                  </div>
-                </div>
-                <div class="panel panel-default">
-                  <div class="panel-heading">
-                    <h4 class="panel-title">
-                      <a data-toggle="collapse" data-parent="#accordion2" href="#acordion_2">
-                        <i class="fa fa-plus"></i>
-                        {{ .Params.accordion2_header }}
-                      </a>
-                    </h4>
-                  </div>
-                  <div id="acordion_2" class="collapse">
-                    <div class="panel-body">
-                      {{ .Params.accordion2_text }}
-                    </div>
-                  </div>
-                </div>
-                <div class="panel panel-default">
-                  <div class="panel-heading">
-                    <h4 class="panel-title">
-                      <a data-toggle="collapse" data-parent="#accordion2" href="#acordion_3">
-                        <i class="fa fa-plus"></i>
-                        {{ .Params.accordion3_header }}
-                      </a>
-                    </h4>
-                  </div>
-                  <div id="acordion_3" class="collapse">
-                    <div class="panel-body">
-                      {{ .Params.accordion3_text }}
-                    </div>
-                  </div>
-                </div>
-                <div class="panel panel-default">
-                  <div class="panel-heading">
-                    <h4 class="panel-title">
-                      <a data-toggle="collapse" data-parent="#accordion3" href="#acordion_4">
-                        <i class="fa fa-plus"></i>
-                        {{ .Params.accordion4_header }}
-                      </a>
-                    </h4>
-                  </div>
-                  <div id="acordion_4" class="collapse">
-                    <div class="panel-body">
-                      {{ .Params.accordion4_text }}
-                    </div>
-                  </div>
-                </div>
-              </div>
-             
-
-            </div>
-
-          </div>
-
-        </div>
-      </section>
-     
-      {{ end }}
-    {{ end }}
-{{ end }}
-
-
-
-
-
-
--->
-<!-- Intro Block
-      ============================================ -->
-<section class="content-block light-bg">
-      
+       <section class="content-block light-bg">
         <!-- Container -->
         <div class="container cont-main">
 
-          
+
           <!-- Section Title -->
           <div class="section-title">
-            <h2>Our Solution</h2>
-            <p>We are experts in both desktop and mobile design.</p>
+            <h2>{{ .Params.header }}</h2>
+            <p>{{ .Params.summary }}</p>
           </div>
           <!-- /Section Title -->
-          
+
           <!-- Row -->
           <div class="row">
-              
+
             <!-- Column -->
             <div class="col-sm-6 col-md-6">
-                  
-              <img  src="images/screen-7.png" alt="pic">
-                  
+
+              <img  src="{{ .Params.solution_image }}">
+
             </div>
             <!-- /Column -->
-                
+
             <!-- Column -->
             <div class="col-sm-6 col-md-6 vspace-xs">
-              <h4>Award winning service delivery</h4>
-              <p>Dorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                  
+              <h4>{{ .Params.second_header }}</h4>
+              <p>{{ .Params.second_summary }}</p>
+
              <!-- Nested Row -->
               <div class="row">
-              
+
                 <!-- Column -->
                 <div class="col-xs-12 col-sm-6 col-md-6">
                   <!-- vlinks -->
                   <ul class="vlinks vlinks-iconed vlinks-md">
-                    <li><i class="icon fa fa-trophy"></i><a class="title" href="#">Quality Award</a><span class="meta">1st Oct 2012</span></li>
-                    <li><i class="icon fa fa-bookmark"></i><a class="title" href="#">ISO Certification</a><span class="meta">25 FEB 2013</span></li>
+                    <li><i class="icon fa fa-{{ .Params.first_solution_icon }}"></i><a class="title" href="{{ .Params.first_solution_link }}">{{ .Params.first_solution_title }}</a><span class="meta">{{ .Params.first_solution_date }}</span></li>
+                    <li><i class="icon fa fa-{{ .Params.second_solution_icon }}"></i><a class="title" href="{{ .Params.second_solution_link }}">{{ .Params.second_solution_title }}</a><span class="meta">{{ .Params.second_solution_date }}</span></li>
                   </ul>
                   <!-- /vlinks -->
                 </div>
                 <!-- /Column -->
-                
+
                 <!-- Column -->
                 <div class="col-xs-12 col-sm-6 col-md-6">
                   <!-- vlinks -->
                   <ul class="vlinks vlinks-iconed vlinks-md">
-                    <li><i class="icon fa fa-cc"></i><a class="title" href="#">Company Recognition</a><span class="meta">4 NOV 2013</span></li>
-                    <li><i class="icon fa fa-globe"></i><a class="title" href="#">Weby Awards</a><span class="meta">20 MAR 2014</span></li>
+                    <li><i class="icon fa fa-{{ .Params.third_solution_icon }}"></i><a class="title" href="{{ .Params.third_solution_link }}">{{ .Params.third_solution_title }}</a><span class="meta">{{ .Params.third_solution_date }}</span></li>
+                    <li><i class="icon fa fa-{{ .Params.fourth_solution_icon }}"></i><a class="title" href="{{ .Params.fourth_solution_link }}">{{ .Params.fourth_solution_title }}</a><span class="meta">{{ .Params.fourth_solution_date }}</span></li>
                   </ul>
                   <!-- /vlinks -->
                 </div>
                 <!-- /Column -->
-                
+
               </div>
               <!-- /Nested Row -->
-                  
+
             </div>
             <!-- /Column -->
 
           </div>
           <!-- /Row -->
-        
+
         </div>
         <!-- /Container -->
       </section>
       <!-- /Content Block
       ============================================-->
+       {{end}}
+    {{end}}
+{{end}}
