@@ -52,6 +52,10 @@
 
 <!-- Content Block
       ============================================ -->
+
+      {{ range $element :=  .Data.Pages }}
+                  {{ if eq .Section "home" }}
+                      {{ if eq .Title "product" }}
       <section class="content-block default-bg">
       
         <!-- Container -->
@@ -60,8 +64,8 @@
           
           <!-- Section Title -->
           <div class="section-title">
-            <h2>Our services</h2>
-            <p>We are experts in both desktop and mobile design.</p>
+            <h2>{{ .Params.header}}</h2>
+            <p>{{ .Params.summary}}</p>
           </div>
           <!-- /Section Title -->
           
@@ -72,10 +76,10 @@
             <div class="col-sm-6 col-md-4">
               <!-- hfeat -->
               <div class="service hfeat hfeat-md">
-                <i class="icon ti-desktop" ></i>
-                <a class="title">First Feature</a>
-                <p class="text">Sed ut perspiciatis unde omnis iste natus sit voluptatem </p>
-                <a class="more-link">read more<i class="icon-right ti ti-arrow-right"></i></a>
+                <i class="icon ti-{{ .Params.block1_icon}}" ></i>
+                <a class="title">{{ .Params.block1_title_strong}}</a>
+                <p class="text">{{ .Params.block1_text}}</p>
+                <a class="more-link"><a href="{{.Params.block1_link}}">{{.Params.block1_text_link}}<i class="icon-right ti ti-arrow-right"></i></a>
               </div>
               <!-- /hfeat -->
             </div>
@@ -85,10 +89,10 @@
             <div class="col-sm-6 col-md-4">
               <!-- hfeat -->
               <div class="service hfeat hfeat-md">
-                <i class="icon ti-camera"></i>
-                <a class="title">second feature</a>
-                <p class="text">Sed ut perspiciatis unde omnis iste natus sit voluptatem </p>
-                <a class="more-link">read more<i class="icon-right ti ti-arrow-right"></i></a>
+                <i class="icon ti-{{ .Params.block2_icon}}" ></i>
+                <a class="title">{{ .Params.block2_title_strong}}</a>
+                <p class="text">{{ .Params.block2_text}} </p>
+                <a class="more-link"><a href="{{.Params.block2_link}}">{{.Params.block2_text_link}}<i class="icon-right ti ti-arrow-right"></i></a>
               </div>
               <!-- /hfeat -->
             </div>
@@ -98,10 +102,10 @@
             <div class="col-sm-6 col-md-4">
               <!-- hfeat -->
               <div class="service hfeat hfeat-md">
-                <i class="icon ti-printer"></i>
-                <a class="title">third feature</a>
-                <p class="text">Sed ut perspiciatis unde omnis iste natus sit voluptatem </p>
-                <a class="more-link">read more<i class="icon-right ti ti-arrow-right"></i></a>
+                <i class="icon ti-{{ .Params.block3_icon}}" ></i>
+                <a class="title">{{ .Params.block3_title_strong}}</a>
+                <p class="text">{{ .Params.block3_text}} </p>
+                <a class="more-link"><a href="{{.Params.block3_link}}">{{.Params.block3_text_link}}<i class="icon-right ti ti-arrow-right"></i></a>
               </div>
               <!-- /hfeat -->
             </div>
@@ -116,3 +120,6 @@
       </section>
       <!-- /Content Block
       ============================================-->
+{{end}}
+{{end}}
+{{end}}
