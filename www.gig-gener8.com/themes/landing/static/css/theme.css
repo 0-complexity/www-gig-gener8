@@ -4849,3 +4849,7 @@ table.cart-contents {
   @media (max-width: 767px) {
     #style-switcher {
       display: none; } }
+#wrap {    
+    background: #FFF;
+    padding: 170px 0 0 0;
+  }
