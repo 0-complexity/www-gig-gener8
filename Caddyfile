@@ -3,7 +3,7 @@ http://gig-gener8:5555 {
     gzip
     root www.gig-gener8.com
     git {
-       repo git@git.aydo.com:static-websites/gig-gener8.git
+       repo https://github.com/0-complexity/www-gig-gener8.gitt
        interval 300
        key ../keys/id_rsa
        path ../
