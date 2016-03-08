@@ -7,6 +7,6 @@ http://gig-gener8:5555 {
        interval 300
        key ../keys/id_rsa
        path ../
-       then ./hugo-init
+       then hugo server www.gig-gener8.com
     }
 }
